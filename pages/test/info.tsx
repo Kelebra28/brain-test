@@ -1,5 +1,7 @@
-export default function testinfo (){
-    return <body>
+
+const Testinfo = () => {
+    return (
+        <>
             <h1>TEST DE CREENCIAS</h1>
             <h2> INSTRUCCIONES PARA RESPONDER AL CUESTIONARIO </h2>
             <ul>
@@ -11,10 +13,9 @@ export default function testinfo (){
                 <li>•	Conteste a todos los ítems.</li>
             </ul>
             <button>proceder con el test</button>   
-        </body>
- 
-
+        </>
+    )
     
-   
-
 }
+
+export default Testinfo
