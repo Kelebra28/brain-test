@@ -1,4 +1,3 @@
-
 const Testinfo = () => {
     return (
         <>
@@ -15,7 +14,5 @@ const Testinfo = () => {
             <button>proceder con el test</button>   
         </>
     )
-    
 }
-
 export default Testinfo
