@@ -1,12 +1,6 @@
 import { useState, useEffect } from "react";
 const Test1 = () => { 
     
-    // const [data, setData] = useState({
-    //     dataQ1: '',
-    //     dataQ2: '',
-    //     dataQ3: ''
-    // });
-
     const [data, setData] = useState({
         dataQ1: (Number),
         dataQ2: (Number),
@@ -15,25 +9,14 @@ const Test1 = () => {
 
     const testvalues = Object.values(data);
 
-    // const sumdata = testvalues.reduce((sumdata, dataQ1)=> sumdata + dataQ1, 0);
-    // const sumdata = ()=> {
-    //    const root =  testvalues.map(Math.sqrt)
-    // }
-        // testvalues.map)
-    const sumdata = testvalues.reduce<number>((acc, actualNum) => {
-        // console.log(acc)
-        // console.log(actualNum)
-        return actualNum 
+    const sumdata = testvalues.reduce<number>((acc, num) => {
+        return acc + Number(num)
     }, 0)
     
-//     const sumdata = (accumulator, curr) => accumulator + curr;
-// console.log(arr.reduce(reducer));
-
-
     const handleChangeData = (e: React.ChangeEvent<any>) =>{
         setData({
             ...data,
-            [e.target.name]:e.target.value
+            [e.target.name]: Number(e.target.value)
         })
     }
 
