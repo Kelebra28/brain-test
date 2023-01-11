@@ -1,8 +1,17 @@
+
+import { useContext } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+import { AppContext } from './_app'
+
 export default function Home() {
+  // @ts-ignore
+  const { isAuth, setIsAuth } = useContext(AppContext)
+
+  console.log('State Context', isAuth)
+  console.log( 'context set',setIsAuth)
   return (
     <div className={styles.container}>
       <Head>
