@@ -2,34 +2,32 @@ import { useState, useEffect } from "react";
 const Test1 = () => { 
     
     const [data, setData] = useState({
-        dataQ1: (Number),
-        dataQ2: (Number),
-        dataQ3: (Number)
+        dataQ1: null,
+        dataQ2: null,
+        dataQ3: null
     });
 
-    const testvalues = Object.values(data);
+    const testvalues = Object.values(data);    
 
     const sumdata = testvalues.reduce<number>((acc, num) => {
         return acc + Number(num)
     }, 0)
-    
+
     const handleChangeData = (e: React.ChangeEvent<any>) =>{
         setData({
             ...data,
-            [e.target.name]: Number(e.target.value)
+            [e.target.name]: (e.target.value)
         })
     }
 
-    const handleSubmit = (e: React.ChangeEvent<any>) =>{
-
+    const handleSubmit = (e: React.ChangeEvent<any>) =>{e.preventDefault();
         if(data){
-            e.preventDefault();
-            alert('el formulario se ha enviado')
-            // console.log(data);
+            console.log('el formulario se ha enviado')
+            console.log(data);
             console.log(sumdata);
         } else {
-            alert('Hay preguntas sin responder, complete el formulario')
-        }
+            console.log('Hay preguntas sin responder, complete el formulario')
+        } 
     }
 
     return ( 
@@ -39,35 +37,35 @@ const Test1 = () => {
                 <fieldset id="dataQ1">
                     <legend> 1.- Para mí es importante recibir la aprobación de los demás. </legend>
                     <label>
-                        <input type="radio" id="ansYes" name="dataQ1" value={1} onChange={handleChangeData} /> Si
+                        <input type="radio" id="ansYes" name="dataQ1" value={1} onChange={handleChangeData} required/> Si
                     </label>
                     <label >
-                        <input type="radio" id="ansNo" name="dataQ1" value={0} onChange={handleChangeData} /> No
+                        <input type="radio" id="ansNo" name="dataQ1" value={0} onChange={handleChangeData} required/> No
                     </label>
                 </fieldset>
 
                 <fieldset id="dataQ2">
                     <legend>  2.- Odio equivocarme en algo. </legend>
                     <label>
-                        <input type="radio" id="ansYes" name="dataQ2" value={1} onChange={handleChangeData} /> Si
+                        <input type="radio" id="ansYes" name="dataQ2" value={1} onChange={handleChangeData} required/> Si
                     </label>
                     <label >
-                        <input type="radio" id="ansNo" name="dataQ2" value={0} onChange={handleChangeData} /> No
+                        <input type="radio" id="ansNo" name="dataQ2" value={0} onChange={handleChangeData} required/> No
                     </label>
                 </fieldset>
 
                 <fieldset id="dataQ3">
                     <legend> 3.- La gente que se equivoca, logra lo que se merece.  </legend>
                     <label>
-                        <input type="radio" id="ansYes" name="dataQ3" value={1} onChange={handleChangeData} /> Si
+                        <input type="radio" id="ansYes" name="dataQ3" value={1} onChange={handleChangeData} required/> Si
                     </label>
                     <label >
-                        <input type="radio" id="ansNo" name="dataQ3" value={0} onChange={handleChangeData} /> No
+                        <input type="radio" id="ansNo" name="dataQ3" value={0} onChange={handleChangeData} required/> No
                     </label>
                 </fieldset>
 
                 <label htmlFor="">
-                    <input type="submit" name="" id="" />
+                    <button type="submit" placeholder="terminar" name="terminar" id=""/>
                 </label>
             </form>   
         </>
