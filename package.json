@@ -18,5 +18,9 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.9.3"
-  }
+  },
+  "main": "index.js",
+  "repository": "git@github.com:Kelebra28/brain-test.git",
+  "author": "Kelebra <ricardokelebra@gmail.com>",
+  "license": "MIT"
 }
