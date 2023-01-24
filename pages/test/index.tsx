@@ -1,4 +1,4 @@
-import TestLayaout from "../../src/components/layaouts/TestLayaout"
+import TestLayaout from "../../src/components/layouts/TestLayaout"
 
 const Test = () => {
 
