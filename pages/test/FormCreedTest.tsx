@@ -412,7 +412,7 @@ const FormCreedTest = () => {
                     <p>Ciertas personas son malas, viles y perversas y deberían ser castigadas.</p>
                     
                     <fieldset id="dataInterCondemnation1">
-                    <legend> 1.- Para mí es importante recibir la aprobación de los demás. </legend>
+                    <legend> 21.- Quiero gustar a todo el mundo.</legend>
                     <label>
                         <input type="radio" id="ansAYes" name="dataInterCondemnation1" value={1} onChange={handleChangeData} required/> Si
                     </label>
@@ -422,17 +422,17 @@ const FormCreedTest = () => {
                     </fieldset>
 
                     <fieldset id="dataInterCondemnation2">
-                    <legend>  2.- Odio equivocarme en algo. </legend>
+                    <legend>  22.- No me gusta competir en actividades en las que los demás son mejores que yo. </legend>
                     <label>
-                        <input type="radio" id="ansAYes" name="dataInterCondemnation2" value={1} onChange={handleChangeData} required/> Si
+                        <input type="radio" id="ansBYes" name="dataInterCondemnation2" value={0} onChange={handleChangeData} required/> Si
                     </label>
                     <label >
-                        <input type="radio" id="ansANo" name="dataInterCondemnation2" value={0} onChange={handleChangeData} required/> No
+                        <input type="radio" id="ansBNo" name="dataInterCondemnation2" value={1} onChange={handleChangeData} required/> No
                     </label>
                     </fieldset>
 
                     <fieldset id="dataInterCondemnation3">
-                    <legend> 3.- La gente que se equivoca, logra lo que se merece.  </legend>
+                    <legend> 23.- Aquellos que se equivocan merecen cargar con la culpa.  </legend>
                     <label>
                         <input type="radio" id="ansAYes" name="dataInterCondemnation3" value={1} onChange={handleChangeData} required/> Si
                     </label>
@@ -442,17 +442,17 @@ const FormCreedTest = () => {
                     </fieldset>
 
                     <fieldset id="dataInterCondemnation4">
-                    <legend> 4.- Generalmente acepto los acontecimientos con filosofía.. </legend>
+                    <legend> 24.- Las cosas deberían ser distintas a como son. </legend>
                     <label>
-                        <input type="radio" id="ansBYes" name="dataInterCondemnation4" value={0} onChange={handleChangeData} required/> Si
+                        <input type="radio" id="ansAYes" name="dataInterCondemnation4" value={1} onChange={handleChangeData} required/> Si
                     </label>
                     <label >
-                        <input type="radio" id="ansBNo" name="dataInterCondemnation4" value={1} onChange={handleChangeData} required/> No
+                        <input type="radio" id="ansANo" name="dataInterCondemnation4" value={0} onChange={handleChangeData} required/> No
                     </label>
                     </fieldset>
 
                     <fieldset id="dataInterCondemnation5">
-                    <legend>  5.- Si una persona quiere, puede ser feliz en casi cualquier circunstancia. </legend>
+                    <legend>  25.- Yo provoco mi propio mal humor. </legend>
                     <label>
                         <input type="radio" id="ansBYes" name="dataInterCondemnation5" value={0} onChange={handleChangeData} required/> Si
                     </label>
@@ -462,7 +462,7 @@ const FormCreedTest = () => {
                     </fieldset>
 
                     <fieldset id="dataInterCondemnation6">
-                    <legend> 6.- Temo a las cosas que, a menudo, me resultan objeto de preocupación. </legend>
+                    <legend> 26.- A menudo, no puedo quitarme algún asunto de la cabeza. </legend>
                     <label>
                         <input type="radio" id="ansAYes" name="dataInterCondemnation6" value={1} onChange={handleChangeData} required/> Si
                     </label>
@@ -472,7 +472,7 @@ const FormCreedTest = () => {
                     </fieldset>
 
                     <fieldset id="dataInterCondemnation7">
-                    <legend> 7.- Normalmente aplazo las decisiones importantes. </legend>
+                    <legend> 27.- Evito enfrentarme a los problemas. </legend>
                     <label>
                         <input type="radio" id="ansAYes" name="dataInterCondemnation7" value={1} onChange={handleChangeData} required/> Si
                     </label>
@@ -482,7 +482,7 @@ const FormCreedTest = () => {
                     </fieldset>
 
                     <fieldset id="dataInterCondemnation8">
-                    <legend> 8.- Todo el mundo necesita de alguien a quién recurrir en busca de ayuda y consejo. </legend>
+                    <legend> 28.- Todo el mundo necesita tener fuera de si mismo una fuente de energía. </legend>
                     <label>
                         <input type="radio" id="ansAYes" name="dataInterCondemnation8" value={1} onChange={handleChangeData} required/> Si
                     </label>
@@ -492,22 +492,128 @@ const FormCreedTest = () => {
                     </fieldset>
 
                     <fieldset id="dataInterCondemnation9">
-                    <legend> 9.- “Una cebra no puede cambiar sus rayas”.  </legend>
+                    <legend> 29.- Solo porque una vez algo afecto tu vida de forma importante, no quiere decir que tenga que ser igual en el futuro.  </legend>
                     <label>
-                        <input type="radio" id="ansAYes" name="dataInterCondemnation9" value={1} onChange={handleChangeData} required/> Si
+                        <input type="radio" id="ansBYes" name="dataInterCondemnation9" value={0} onChange={handleChangeData} required/> Si
                     </label>
                     <label >
-                        <input type="radio" id="ansANo" name="dataInterCondemnation9" value={0} onChange={handleChangeData} required/> No
+                        <input type="radio" id="ansBNo" name="dataInterCondemnation9" value={1} onChange={handleChangeData} required/> No
                     </label>
                     </fieldset>
 
                     <fieldset id="dataInterCondemnation10">
-                    <legend> 10.- Prefiero sobre todas las cosas pasar el tiempo libre de una forma tranquila. </legend>
+                    <legend> 30.- Me siento mas satisfecho cuando tengo muchas cosas que hacer. </legend>
                     <label>
-                        <input type="radio" id="ansAYes" name="dataInterCondemnation10" value={1} onChange={handleChangeData} required/> Si
+                        <input type="radio" id="ansBYes" name="dataInterCondemnation10" value={0} onChange={handleChangeData} required/> Si
                     </label>
                     <label >
-                        <input type="radio" id="ansANo" name="dataInterCondemnation10" value={0} onChange={handleChangeData} required/> No
+                        <input type="radio" id="ansBNo" name="dataInterCondemnation10" value={1} onChange={handleChangeData} required/> No
+                    </label>
+                    </fieldset>
+
+                </div>
+
+                <div>
+                    <h1>Interpretacion 4.- BTF</h1>
+                    <p>Es horrible cuando las cosas no van como uno quisiera que fueran.</p>
+                    
+                    <fieldset id="dataInterBTF1">
+                    <legend> 21.- Quiero gustar a todo el mundo.</legend>
+                    <label>
+                        <input type="radio" id="ansAYes" name="dataInterBTF1" value={1} onChange={handleChangeData} required/> Si
+                    </label>
+                    <label >
+                        <input type="radio" id="ansANo" name="dataInterBTF1" value={0} onChange={handleChangeData} required/> No
+                    </label>
+                    </fieldset>
+
+                    <fieldset id="dataInterBTF2">
+                    <legend>  22.- No me gusta competir en actividades en las que los demás son mejores que yo. </legend>
+                    <label>
+                        <input type="radio" id="ansBYes" name="dataInterBTF2" value={0} onChange={handleChangeData} required/> Si
+                    </label>
+                    <label >
+                        <input type="radio" id="ansBNo" name="dataInterBTF2" value={1} onChange={handleChangeData} required/> No
+                    </label>
+                    </fieldset>
+
+                    <fieldset id="dataInterBTF3">
+                    <legend> 23.- Aquellos que se equivocan merecen cargar con la culpa.  </legend>
+                    <label>
+                        <input type="radio" id="ansAYes" name="dataInterBTF3" value={1} onChange={handleChangeData} required/> Si
+                    </label>
+                    <label >
+                        <input type="radio" id="ansANo" name="dataInterBTF3" value={0} onChange={handleChangeData} required/> No
+                    </label>
+                    </fieldset>
+
+                    <fieldset id="dataInterBTF4">
+                    <legend> 24.- Las cosas deberían ser distintas a como son. </legend>
+                    <label>
+                        <input type="radio" id="ansAYes" name="dataInterBTF4" value={1} onChange={handleChangeData} required/> Si
+                    </label>
+                    <label >
+                        <input type="radio" id="ansANo" name="dataInterBTF4" value={0} onChange={handleChangeData} required/> No
+                    </label>
+                    </fieldset>
+
+                    <fieldset id="dataInterBTF5">
+                    <legend>  25.- Yo provoco mi propio mal humor. </legend>
+                    <label>
+                        <input type="radio" id="ansBYes" name="dataInterBTF5" value={0} onChange={handleChangeData} required/> Si
+                    </label>
+                    <label >
+                        <input type="radio" id="ansBNo" name="dataInterBTF5" value={1} onChange={handleChangeData} required/> No
+                    </label>
+                    </fieldset>
+
+                    <fieldset id="dataInterBTF6">
+                    <legend> 26.- A menudo, no puedo quitarme algún asunto de la cabeza. </legend>
+                    <label>
+                        <input type="radio" id="ansAYes" name="dataInterBTF6" value={1} onChange={handleChangeData} required/> Si
+                    </label>
+                    <label >
+                        <input type="radio" id="ansANo" name="dataInterBTF6" value={0} onChange={handleChangeData} required/> No
+                    </label>
+                    </fieldset>
+
+                    <fieldset id="dataInterBTF7">
+                    <legend> 27.- Evito enfrentarme a los problemas. </legend>
+                    <label>
+                        <input type="radio" id="ansAYes" name="dataInterBTF7" value={1} onChange={handleChangeData} required/> Si
+                    </label>
+                    <label >
+                        <input type="radio" id="ansANo" name="dataInterBTF7" value={0} onChange={handleChangeData} required/> No
+                    </label>
+                    </fieldset>
+
+                    <fieldset id="dataInterBTF8">
+                    <legend> 28.- Todo el mundo necesita tener fuera de si mismo una fuente de energía. </legend>
+                    <label>
+                        <input type="radio" id="ansAYes" name="dataInterBTF8" value={1} onChange={handleChangeData} required/> Si
+                    </label>
+                    <label >
+                        <input type="radio" id="ansANo" name="dataInterBTF8" value={0} onChange={handleChangeData} required/> No
+                    </label>
+                    </fieldset>
+
+                    <fieldset id="dataInterBTF9">
+                    <legend> 29.- Solo porque una vez algo afecto tu vida de forma importante, no quiere decir que tenga que ser igual en el futuro.  </legend>
+                    <label>
+                        <input type="radio" id="ansBYes" name="dataInterBTF9" value={0} onChange={handleChangeData} required/> Si
+                    </label>
+                    <label >
+                        <input type="radio" id="ansBNo" name="dataInterBTF9" value={1} onChange={handleChangeData} required/> No
+                    </label>
+                    </fieldset>
+
+                    <fieldset id="dataInterBTF10">
+                    <legend> 30.- Me siento mas satisfecho cuando tengo muchas cosas que hacer. </legend>
+                    <label>
+                        <input type="radio" id="ansBYes" name="dataInterBTF10" value={0} onChange={handleChangeData} required/> Si
+                    </label>
+                    <label >
+                        <input type="radio" id="ansBNo" name="dataInterBTF10" value={1} onChange={handleChangeData} required/> No
                     </label>
                     </fieldset>
 
