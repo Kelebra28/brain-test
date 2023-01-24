@@ -194,6 +194,7 @@ const TestLayaout = () => {
             console.log('Hay preguntas sin responder, complete el formulario')
         } 
     }
+    
 
     useEffect(() => {
 
@@ -204,6 +205,16 @@ const TestLayaout = () => {
             handleSubmit={handleSubmit}
             handleChangeData={handleChangeData}
             show={show}
+            sumDataInterSearch={sumDataInterSearch}
+            sumDataInterPerfection={sumDataInterPerfection}
+            sumdataInterCondemnation={sumdataInterCondemnation}
+            sumdataInterBTF={sumdataInterBTF}
+            sumdataInterVictimization={sumdataInterVictimization}
+            sumdataInterAnxious={sumdataInterAnxious}
+            sumdataInterAvoidant={sumdataInterAvoidant}
+            sumdataInterInsecure={sumdataInterInsecure}
+            sumdataInterPast={sumdataInterPast}
+            sumdataInterProcrastination={sumdataInterProcrastination}
         />
     )
 }
