@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import FormCreedTest from '../atoms/FormCreedTest'
 
 const TestLayaout = () => {
@@ -106,6 +106,8 @@ const TestLayaout = () => {
         dataInterProcrastination10: Number(),
 
     })
+    const [show, setShow] = useState(false)
+
     const dataInterSearch = Object.values(
         data.dataInterSearch1+data.dataInterSearch2+data.dataInterSearch3+data.dataInterSearch4+data.dataInterSearch5+data.dataInterSearch6+data.dataInterSearch7+data.dataInterSearch8+data.dataInterSearch9+data.dataInterSearch10
         )
@@ -172,7 +174,9 @@ const TestLayaout = () => {
             [e.target.name]: (e.target.value)
         })
     }
+
     const handleSubmit = (e: React.ChangeEvent<any>) =>{e.preventDefault()
+        setShow(true)
         if(data){
             console.log('el formulario se ha enviado')
             console.log(sumDataInterSearch)
@@ -191,8 +195,16 @@ const TestLayaout = () => {
         } 
     }
 
+    useEffect(() => {
+
+    }, [data])
+
     return(
-        <FormCreedTest handleSubmit={handleSubmit} handleChangeData={handleChangeData} />
+        <FormCreedTest 
+            handleSubmit={handleSubmit}
+            handleChangeData={handleChangeData}
+            show={show}
+        />
     )
 }
 

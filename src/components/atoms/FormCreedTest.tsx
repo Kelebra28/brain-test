@@ -1,6 +1,8 @@
+import CardResults from "./CardResults"
+
 import questions from "../../data/constant"
 
-const FormCreedTest = ({handleSubmit, handleChangeData} : any) => { 
+const FormCreedTest = ({ handleSubmit, handleChangeData, show } : any) => { 
     
 
     return ( 
@@ -20,9 +22,10 @@ const FormCreedTest = ({handleSubmit, handleChangeData} : any) => {
                 )
                 })}
                 <label htmlFor="">
-                    <button type="submit" >Terminar</button>
+                    <button  type="submit" >Terminar</button>
                 </label>
             </form>   
+            {show&& (<CardResults/>)}
         </>
     )
 }
