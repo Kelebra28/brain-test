@@ -177,27 +177,10 @@ const TestLayaout = () => {
 
     const handleSubmit = (e: React.ChangeEvent<any>) =>{e.preventDefault()
         setShow(true)
-        if(data){
-            console.log('el formulario se ha enviado')
-            console.log(sumDataInterSearch)
-            console.log(sumDataInterPerfection)
-            console.log(sumdataInterCondemnation)
-            console.log(sumdataInterBTF)
-            console.log(sumdataInterVictimization)
-            console.log(sumdataInterAnxious)
-            console.log(sumdataInterAvoidant)
-            console.log(sumdataInterInsecure)
-            console.log(sumdataInterPast)
-            console.log(sumdataInterProcrastination)
-            
-        } else {
-            console.log('Hay preguntas sin responder, complete el formulario')
-        } 
     }
     
 
     useEffect(() => {
-
     }, [data])
 
     return(

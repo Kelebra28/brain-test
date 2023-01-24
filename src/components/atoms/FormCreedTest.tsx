@@ -2,21 +2,7 @@ import CardResults from "./CardResults"
 
 import questions from "../../data/constant"
 
-const FormCreedTest = ({ 
-    handleSubmit, 
-    handleChangeData, 
-    show,
-    sumDataInterSearch,
-    sumDataInterPerfection,
-    sumdataInterCondemnation,
-    sumdataInterBTF,
-    sumdataInterVictimization,
-    sumdataInterAnxious,
-    sumdataInterAvoidant,
-    sumdataInterInsecure,
-    sumdataInterPast,
-    sumdataInterProcrastination,
-    } : any) => { 
+const FormCreedTest = ({ handleSubmit, handleChangeData, show } : any) => { 
     
 
     return ( 
@@ -39,19 +25,7 @@ const FormCreedTest = ({
                     <button  type="submit" >Terminar</button>
                 </label>
             </form>   
-            {show&& 
-            (<CardResults
-                sumDataInterSearch={sumDataInterSearch}
-                sumDataInterPerfection={sumDataInterPerfection}
-                sumdataInterCondemnation={sumdataInterCondemnation}
-                sumdataInterBTF={sumdataInterBTF}
-                sumdataInterVictimization={sumdataInterVictimization}
-                sumdataInterAnxious={sumdataInterAnxious}
-                sumdataInterAvoidant={sumdataInterAvoidant}
-                sumdataInterInsecure={sumdataInterInsecure}
-                sumdataInterPast={sumdataInterPast}
-                sumdataInterProcrastination={sumdataInterProcrastination}
-            />)}
+            {show&& (<CardResults/>)}
         </>
     )
 }

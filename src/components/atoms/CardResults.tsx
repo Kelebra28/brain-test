@@ -8,7 +8,7 @@ const CardResults = ({
     sumdataInterAvoidant,
     sumdataInterInsecure,
     sumdataInterPast,
-    sumdataInterProcrastination,
+    sumdataInterProcrastination
     }: any) => {
 
     return(
