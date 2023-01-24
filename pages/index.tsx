@@ -1,4 +1,16 @@
+
+import Link from 'next/link'
+// import { useContext } from 'react'
+// import { AppContext } from './_app'
+
 const index = () => {
+
+
+  // @ts-ignore
+//   const { isAuth, setIsAuth } = useContext(AppContext)
+
+//   console.log('State Context', isAuth)
+//   console.log( 'context set',setIsAuth)
   return (
       <>
           <h1>TEST DE CREENCIAS</h1>
@@ -11,7 +23,7 @@ const index = () => {
               <li>•	Asegúrese de que contesta lo que usted realmente piensa, no lo que cree que debería pensar.</li>
               <li>•	Conteste a todos los ítems.</li>
           </ul>
-          <button>proceder con el test</button>   
+          <Link href="/test"><button>Proceder con el test</button></Link>
       </>
   )
 }
