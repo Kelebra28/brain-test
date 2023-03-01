@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { connectApi } from '../../../api/services'
 import FormCreedTest from '../atoms/FormCreedTest'
 
 const TestLayaout = () => {
@@ -108,6 +109,8 @@ const TestLayaout = () => {
     })
     const [show, setShow] = useState(false)
 
+    const [error, setError] = useState(false)
+
     const dataInterSearch = Object.values(
         data.dataInterSearch1+data.dataInterSearch2+data.dataInterSearch3+data.dataInterSearch4+data.dataInterSearch5+data.dataInterSearch6+data.dataInterSearch7+data.dataInterSearch8+data.dataInterSearch9+data.dataInterSearch10
         )
@@ -179,15 +182,27 @@ const TestLayaout = () => {
         setShow(true)
     }
     
+    const connectApiResponse = async () => {
+        try {
+            const response = await connectApi()
+            console.log(response.data)
+        }catch{
+            setError(true)
+        }
+    }
 
     useEffect(() => {
     }, [data])
 
+    useEffect(() => {
+        connectApiResponse()
+    }, [])
     return(
         <FormCreedTest 
             handleSubmit={handleSubmit}
             handleChangeData={handleChangeData}
             show={show}
+            error={error}
             sumDataInterSearch={sumDataInterSearch}
             sumDataInterPerfection={sumDataInterPerfection}
             sumdataInterCondemnation={sumdataInterCondemnation}
