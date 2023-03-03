@@ -4,6 +4,7 @@ import FormCreedTest from '../atoms/FormCreedTest'
 
 const TestLayaout = () => {
 
+    const [userInfo, setUserInfo] = useState(true)
     const [data, setData] = useState({
         dataInterSearch1: Number(),
         dataInterSearch2: Number(),
@@ -105,7 +106,11 @@ const TestLayaout = () => {
         dataInterProcrastination8: Number(),
         dataInterProcrastination9: Number(),
         dataInterProcrastination10: Number(),
-
+        firstName: '',
+        lastName: '',
+        genre: '',
+        age: '',
+        email: '',
     })
     const [show, setShow] = useState(false)
 
@@ -197,6 +202,7 @@ const TestLayaout = () => {
     useEffect(() => {
         connectApiResponse()
     }, [])
+    console.log(data)
     return(
         <FormCreedTest 
             handleSubmit={handleSubmit}
@@ -213,6 +219,9 @@ const TestLayaout = () => {
             sumdataInterInsecure={sumdataInterInsecure}
             sumdataInterPast={sumdataInterPast}
             sumdataInterProcrastination={sumdataInterProcrastination}
+            data={data}
+            userInfo={userInfo}
+            setUserInfo={setUserInfo}        
         />
     )
 }
