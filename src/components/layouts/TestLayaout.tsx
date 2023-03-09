@@ -194,9 +194,9 @@ const TestLayaout = () => {
     useEffect(() => {
     }, [data])
 
-    useEffect(() => {
-        connectApiResponse()
-    }, [])
+    // useEffect(() => {
+    //     connectApiResponse()
+    // }, [])
     return(
         <FormCreedTest 
             handleSubmit={handleSubmit}
