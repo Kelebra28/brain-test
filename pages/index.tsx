@@ -1,3 +1,4 @@
+import GeneralLaytaout from '../src/components/layouts/GeneralLayaout'
 import IndexLayaout from '../src/components/layouts/IndexLayaout'
 // import { useContext } from 'react'
 // import { AppContext } from './_app'
@@ -10,7 +11,9 @@ const index = () => {
 //   console.log( 'context set',setIsAuth)
 
   return(
-    <IndexLayaout/>
+    <GeneralLaytaout>
+      <IndexLayaout/>
+    </GeneralLaytaout>
   )
 
 }

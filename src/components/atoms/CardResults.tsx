@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 const CardResults = ({
     sumDataInterSearch,
     sumDataInterPerfection,
@@ -11,8 +12,10 @@ const CardResults = ({
     sumdataInterProcrastination
     }: any) => {
 
+    const router = useRouter()
+
     return(
-        <>
+        <div className="results">
             <ul>
                 <li>{`BUSQUEDA DE APROBACIÓN Y RECONOCIMIENTO: ${sumDataInterSearch}`}</li>
                 <li>{`PERFECCIONISTA: ${sumDataInterPerfection}`}</li>
@@ -25,7 +28,8 @@ const CardResults = ({
                 <li>{`INFLUENCIA DEL PASADO: ${sumdataInterPast}`}</li>
                 <li>{`PROCRASTINACIÓN: ${sumdataInterProcrastination}`}</li>
             </ul>
-        </>
+            <button onClick={() => router.push('/')} className="buttonDisable">Terminar</button>
+        </div>
     )
 }
 
