@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { connectApi } from '../../../api/services'
+import { connectApi, createAnnonimousUser } from '../../../api/services'
 import FormCreedTest from '../atoms/FormCreedTest'
 
 const TestLayaout = () => {
@@ -113,8 +113,8 @@ const TestLayaout = () => {
         email: '',
     })
     const [show, setShow] = useState(false)
-
     const [error, setError] = useState(false)
+    const [disable, setDisable] = useState(true)
 
     const dataInterSearch = Object.values(
         data.dataInterSearch1+data.dataInterSearch2+data.dataInterSearch3+data.dataInterSearch4+data.dataInterSearch5+data.dataInterSearch6+data.dataInterSearch7+data.dataInterSearch8+data.dataInterSearch9+data.dataInterSearch10
@@ -183,26 +183,58 @@ const TestLayaout = () => {
         })
     }
 
-    const handleSubmit = (e: React.ChangeEvent<any>) =>{e.preventDefault()
-        setShow(true)
-    }
-    
     const connectApiResponse = async () => {
         try {
             const response = await connectApi()
+            setShow(true)
             console.log(response.data)
         }catch{
             setError(true)
         }
     }
+    
+    const createAnnonimousUserSubmit = async () => {
+        try {
+            const response = await createAnnonimousUser(
+                data.email,
+                data.firstName,
+                data.lastName,
+                data.genre,
+                data.age,
+                false, 
+                'creencias',
+                sumDataInterSearch,
+                sumDataInterPerfection,
+                sumdataInterCondemnation,
+                sumdataInterBTF,
+                sumdataInterVictimization,
+                sumdataInterAnxious,
+                sumdataInterAvoidant,
+                sumdataInterInsecure,
+                sumdataInterPast,
+                sumdataInterProcrastination
+            )
+            setShow(true)
+            setDisable(true)
+            console.log(response)
+        }catch (e) {
+            console.log(e)
+        }
+    }
+
+    const handleSubmit = (e: React.ChangeEvent<any>) =>{
+        e.preventDefault()
+        createAnnonimousUserSubmit()
+    }
 
     useEffect(() => {
     }, [data])
-
     useEffect(() => {
-        connectApiResponse()
-    }, [])
-    console.log(data)
+        if(data.firstName && data.lastName && data.genre && data.age && data.email !== ''){
+            setDisable(false)
+        }
+    }, [data])
+
     return(
         <FormCreedTest 
             handleSubmit={handleSubmit}
@@ -221,7 +253,8 @@ const TestLayaout = () => {
             sumdataInterProcrastination={sumdataInterProcrastination}
             data={data}
             userInfo={userInfo}
-            setUserInfo={setUserInfo}        
+            setUserInfo={setUserInfo}    
+            disable={disable}    
         />
     )
 }

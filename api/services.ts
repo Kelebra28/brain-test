@@ -39,7 +39,7 @@ const createAnnonimousUser = (
     frist_name: string,
     last_name: string,
     genre: string,
-    age: number,
+    age: string,
     contacted: boolean,
     name: string,
     interSearch: number,
@@ -53,7 +53,7 @@ const createAnnonimousUser = (
     interPast: number,
     interProcrastination: number
 ) => {
-    const response = axios.post<CreateUser>(`${BASE_URL_API}/createAnnonimousUser`,
+    const response = axios.post<CreateUser>(`${BASE_URL_API}api/createAnnonimousUser`,
         {
             email,
             frist_name,
