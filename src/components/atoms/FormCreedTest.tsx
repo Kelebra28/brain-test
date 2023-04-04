@@ -1,4 +1,5 @@
-import CardResults from "./CardResults"
+// import CardResults from "./CardResults"
+import { useRouter } from 'next/router'
 
 import questions from "../../data/constant"
 import AnnonimousUser from './AnnonimousUser';
@@ -22,23 +23,21 @@ const FormCreedTest = ({
     setUserInfo,
     userInfo,
     } : any) => { 
-    
+        const router = useRouter()
+        const handeClick = () => {
+            router.push('/')
+        }
 
     return ( 
         <>  
             {show ?
-            (<CardResults 
-                sumDataInterSearch={sumDataInterSearch}
-                sumDataInterPerfection={sumDataInterPerfection}
-                sumdataInterCondemnation={sumdataInterCondemnation}
-                sumdataInterBTF={sumdataInterBTF}
-                sumdataInterVictimization={sumdataInterVictimization}
-                sumdataInterAnxious={sumdataInterAnxious}
-                sumdataInterAvoidant={sumdataInterAvoidant}
-                sumdataInterInsecure={sumdataInterInsecure}
-                sumdataInterPast={sumdataInterPast}
-                sumdataInterProcrastination={sumdataInterProcrastination}
-            />) : (
+            (
+                <div className='resultCards'>
+                    <h3 >Gracias por tu particación</h3>
+                    <h5 >Nos pondremos al contácto contigo</h5>
+                    <button className='buttonDisable' onClick={handeClick}>Terminar</button>
+                </div>
+            ) : (
                 <form 
                 onSubmit={handleSubmit}
                 name="FormCreedTest" 

@@ -2,6 +2,9 @@ import { useRouter } from 'next/router'
 
 const IndexLayaout = () => {
     const router = useRouter()
+    const handeClick = () => {
+        router.push('/test')
+    }
     return (
         <div className='indexLayaout'>
             <h1>TEST DE CREENCIAS</h1>
@@ -14,7 +17,7 @@ const IndexLayaout = () => {
                 <li>Asegúrese de que contesta lo que usted realmente piensa, no lo que cree que debería pensar.</li>
                 <li>Conteste a todos los ítems.</li>
             </ul>
-            <button onClick={() => router.push('/test')}>Proceder con el test</button>
+            <button onClick={handeClick}>Proceder con el test</button>
         </div>
     )
 }
