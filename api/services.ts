@@ -35,23 +35,23 @@ const connectApi = () => {
 }
 
 const createAnnonimousUser = (
-    email: string,
-    frist_name: string,
-    last_name: string,
-    genre: string,
-    age: string,
-    contacted: boolean,
-    name: string,
-    interSearch: number,
-    interPerfection: number,
-    interCondemnation: number,
-    interBTF: number,
-    interVictimization: number,
-    interAnxious: number,
-    interAvoidant: number,
-    interInsecure: number,
-    interPast: number,
-    interProcrastination: number
+    email?: string,
+    frist_name?: string,
+    last_name?: string,
+    genre?: string,
+    age?: string,
+    contacted?: boolean,
+    name?: string,
+    interSearch?: number,
+    interPerfection?: number,
+    interCondemnation?: number,
+    interBTF?: number,
+    interVictimization?: number,
+    interAnxious?: number,
+    interAvoidant?: number,
+    interInsecure?: number,
+    interPast?: number,
+    interProcrastination?: number
 ) => {
     const response = axios.post<CreateUser>(`${BASE_URL_API}api/createAnnonimousUser`,
         {

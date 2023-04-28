@@ -22,12 +22,12 @@ const FormCreedTest = ({
     disable,
     setUserInfo,
     userInfo,
+    disableButton
     } : any) => { 
         const router = useRouter()
         const handeClick = () => {
             router.push('/')
         }
-
     return ( 
         <>  
             {show ?
@@ -69,7 +69,7 @@ const FormCreedTest = ({
                             })}
                             {!disable && (
                                 <label className="buttonFinished">
-                                    <button className="buttonDisable"  type="submit" >Terminar</button>
+                                    <button disabled={disableButton} className="buttonDisable"  type="submit" >Terminar</button>
                                 </label> )
                             }
                             </>

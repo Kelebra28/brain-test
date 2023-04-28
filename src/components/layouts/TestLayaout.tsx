@@ -115,45 +115,46 @@ const TestLayaout = () => {
     const [show, setShow] = useState(false)
     const [error, setError] = useState(false)
     const [disable, setDisable] = useState(true)
+    const [disableButton, setDisableButton] = useState(false)
 
     const dataInterSearch = Object.values(
-        data.dataInterSearch1+data.dataInterSearch2+data.dataInterSearch3+data.dataInterSearch4+data.dataInterSearch5+data.dataInterSearch6+data.dataInterSearch7+data.dataInterSearch8+data.dataInterSearch9+data.dataInterSearch10
+        data.dataInterSearch1 + data.dataInterSearch2 + data.dataInterSearch3 + data.dataInterSearch4 + data.dataInterSearch5 +data.dataInterSearch6 + data.dataInterSearch7 + data.dataInterSearch8 + data.dataInterSearch9 + data.dataInterSearch10
         )
 
     const dataInterPerfection = Object.values(
-        data.dataInterPerfection1+data.dataInterPerfection2+data.dataInterPerfection3+data.dataInterPerfection4+data.dataInterPerfection5+data.dataInterPerfection6+data.dataInterPerfection7+data.dataInterPerfection8+data.dataInterPerfection9+data.dataInterPerfection10
+        data.dataInterPerfection1 + data.dataInterPerfection2 + data.dataInterPerfection3 + data.dataInterPerfection4 +data.dataInterPerfection5 + data.dataInterPerfection6 +data.dataInterPerfection7 +data.dataInterPerfection8 + data.dataInterPerfection9 + data.dataInterPerfection10
         )
     
     const dataInterCondemnation = Object.values(
-        data.dataInterCondemnation1+data.dataInterCondemnation2+data.dataInterCondemnation3+data.dataInterCondemnation4+data.dataInterCondemnation5+data.dataInterCondemnation6+data.dataInterCondemnation7+data.dataInterCondemnation8+data.dataInterCondemnation9+data.dataInterCondemnation10
+        data.dataInterCondemnation1 + data.dataInterCondemnation2 + data.dataInterCondemnation3 + data.dataInterCondemnation4 + data.dataInterCondemnation5 + data.dataInterCondemnation6 + data.dataInterCondemnation7 + data.dataInterCondemnation8 + data.dataInterCondemnation9 + data.dataInterCondemnation10
         )
 
     const dataInterBTF = Object.values(
-        data.dataInterBTF1+data.dataInterBTF2+data.dataInterBTF3+data.dataInterBTF4+data.dataInterBTF5+data.dataInterBTF6+data.dataInterBTF7+data.dataInterBTF8+data.dataInterBTF9+data.dataInterBTF10
+        data.dataInterBTF1 + data.dataInterBTF2 + data.dataInterBTF3 + data.dataInterBTF4 + data.dataInterBTF5 + data.dataInterBTF6 + data.dataInterBTF7 + data.dataInterBTF8 + data.dataInterBTF9 + data.dataInterBTF10
         )
     
     const dataInterVictimization = Object.values(
-        data.dataInterVictimization1+data.dataInterVictimization2+data.dataInterVictimization3+data.dataInterVictimization4+data.dataInterVictimization5+data.dataInterVictimization6+data.dataInterVictimization7+data.dataInterVictimization8+data.dataInterVictimization9+data.dataInterVictimization10
+        data.dataInterVictimization1 + data.dataInterVictimization2 + data.dataInterVictimization3 + data.dataInterVictimization4 + data.dataInterVictimization5 + data.dataInterVictimization6 + data.dataInterVictimization7 + data.dataInterVictimization8 + data.dataInterVictimization9 + data.dataInterVictimization10
         )
     
     const dataInterAnxious = Object.values(
-        data.dataInterAnxious1+data.dataInterAnxious2+data.dataInterAnxious3+data.dataInterAnxious4+data.dataInterAnxious5+data.dataInterAnxious6+data.dataInterAnxious7+data.dataInterAnxious8+data.dataInterAnxious9+data.dataInterAnxious10
+        data.dataInterAnxious1 + data.dataInterAnxious2 + data.dataInterAnxious3 + data.dataInterAnxious4 + data.dataInterAnxious5 + data.dataInterAnxious6 + data.dataInterAnxious7 + data.dataInterAnxious8 + data.dataInterAnxious9 + data.dataInterAnxious10
         )
 
     const dataInterAvoidant = Object.values(
-        data.dataInterAvoidant1+data.dataInterAvoidant2+data.dataInterAvoidant3+data.dataInterAvoidant4+data.dataInterAvoidant5+data.dataInterAvoidant6+data.dataInterAvoidant7+data.dataInterAvoidant8+data.dataInterAvoidant9+data.dataInterAvoidant10
+        data.dataInterAvoidant1 + data.dataInterAvoidant2 + data.dataInterAvoidant3 + data.dataInterAvoidant4 + data.dataInterAvoidant5 + data.dataInterAvoidant6 + data.dataInterAvoidant7 + data.dataInterAvoidant8 + data.dataInterAvoidant9 + data.dataInterAvoidant10
         )
 
     const dataInterInsecure = Object.values(
-        data.dataInterInsecure1+data.dataInterInsecure2+data.dataInterInsecure3+data.dataInterInsecure4+data.dataInterInsecure5+data.dataInterInsecure6+data.dataInterInsecure7+data.dataInterInsecure8+data.dataInterInsecure9+data.dataInterInsecure10
+        data.dataInterInsecure1 + data.dataInterInsecure2 + data.dataInterInsecure3 + data.dataInterInsecure4 + data.dataInterInsecure5 + data.dataInterInsecure6 + data.dataInterInsecure7 + data.dataInterInsecure8 + data.dataInterInsecure9 + data.dataInterInsecure10
         )
 
     const dataInterPast = Object.values(
-        data.dataInterPast1+data.dataInterPast2+data.dataInterPast3+data.dataInterPast4+data.dataInterPast5+data.dataInterPast6+data.dataInterPast7+data.dataInterPast8+data.dataInterPast9+data.dataInterPast10
+        data.dataInterPast1 + data.dataInterPast2 + data.dataInterPast3 + data.dataInterPast4 + data.dataInterPast5 + data.dataInterPast6 + data.dataInterPast7 + data.dataInterPast8 + data.dataInterPast9 + data.dataInterPast10
         )
 
     const dataInterProcrastination = Object.values(
-        data.dataInterProcrastination1+data.dataInterProcrastination2+data.dataInterProcrastination3+data.dataInterProcrastination4+data.dataInterProcrastination5+data.dataInterProcrastination6+data.dataInterProcrastination7+data.dataInterProcrastination8+data.dataInterProcrastination9+data.dataInterProcrastination10
+        data.dataInterProcrastination1 + data.dataInterProcrastination2 + data.dataInterProcrastination3 + data.dataInterProcrastination4 + data.dataInterProcrastination5 + data.dataInterProcrastination6 + data.dataInterProcrastination7 + data.dataInterProcrastination8 + data.dataInterProcrastination9 + data.dataInterProcrastination10
         )
 
     const sumDataInterSearch = dataInterSearch.reduce<number>((acc, num) => {return acc + Number(num)}, 0)
@@ -195,6 +196,7 @@ const TestLayaout = () => {
     
     const createAnnonimousUserSubmit = async () => {
         try {
+            setDisable(true)
             const response = await createAnnonimousUser(
                 data.email,
                 data.firstName,
@@ -218,7 +220,10 @@ const TestLayaout = () => {
             setDisable(true)
             console.log(response)
         }catch (e) {
+            setDisable(false)
             console.log(e)
+        } finally {
+            setDisableButton(true)
         }
     }
 
@@ -255,6 +260,7 @@ const TestLayaout = () => {
             userInfo={userInfo}
             setUserInfo={setUserInfo}    
             disable={disable}    
+            disableButton={disableButton}
         />
     )
 }
