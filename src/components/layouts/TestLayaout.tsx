@@ -229,6 +229,17 @@ const TestLayaout = () => {
 
     const handleSubmit = (e: React.ChangeEvent<any>) =>{
         e.preventDefault()
+        // console.log(`Search: ${sumDataInterSearch}`)
+        // console.log(`Perfection: ${sumDataInterPerfection}`)
+        // console.log(`Condemantion: ${sumdataInterCondemnation}`)
+        // console.log(`BFT: ${sumdataInterBTF}`)
+        // console.log(`Victimation: ${sumdataInterVictimization}`)
+        // console.log(`Anxious: ${sumdataInterAnxious}`)
+        // console.log(`Avoidant: ${sumdataInterAvoidant}`)
+        // console.log(`Insecure: ${sumdataInterInsecure}`)
+        // console.log(`Past: ${sumdataInterPast}`)
+        // console.log(`Procastination: ${sumdataInterProcrastination}`)
+        // console.log(data)
         createAnnonimousUserSubmit()
     }
 
